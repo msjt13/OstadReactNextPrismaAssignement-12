@@ -7,7 +7,7 @@ export default async function() {
     const res = await fetch(url);
 
     if(!res.ok) {
-        throw new Error('Fetching Posts Error.')
+        throw new Error('Fetching New Posts Error.')
     }
 
     return res.json();

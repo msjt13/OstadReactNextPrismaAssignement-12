@@ -1,7 +1,14 @@
+'use client'
+
 import Link from 'next/link';
 import React from 'react';
+import { usePathname } from 'next/navigation';
 
 const NavBar = () => {
+    const pathname = usePathname();
+
+    console.log('pathname', pathname)
+
     return (
         <main>
             <header>
@@ -31,7 +38,7 @@ const NavBar = () => {
                                 <li>
                                     <Link
                                         href="/"
-                                        className="block py-2 pl-3 pr-4 text-white rounded bg-primary-700 bg-transparent text-primary-700 p-0 dark:text-white"
+                                        className={'block py-2 pl-3 pr-4 border-b border-gray-100 bg-transparent p-0 hover:bg-gray-50 hover:bg-transparent hover:text-primary-700 dark:hover:bg-gray-700 dark:hover:text-white dark:hover:bg-transparent dark:border-gray-700' + (pathname === '/' ? ' bg-primary-100 text-white' : '  text-gray-400')}
                                         aria-current="page"
                                     >
                                         Home
@@ -40,7 +47,7 @@ const NavBar = () => {
                                 <li>
                                     <Link
                                         href="/about"
-                                        className="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 hover:bg-transparent border-0 hover:text-primary-700 p-0 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white dark:hover:bg-transparent dark:border-gray-700"
+                                        className={'block py-2 pl-3 pr-4 border-b border-gray-100 bg-transparent p-0 hover:bg-gray-50 hover:bg-transparent hover:text-primary-700 dark:hover:bg-gray-700 dark:hover:text-white dark:hover:bg-transparent dark:border-gray-700' + (pathname === '/about' ? ' bg-primary-100 text-white' : ' text-gray-400')}
                                     >
                                         About
                                     </Link>
@@ -48,7 +55,7 @@ const NavBar = () => {
                                 <li>
                                     <Link
                                         href="/blog"
-                                        className="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 hover:bg-transparent border-0 hover:text-primary-700 p-0 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white dark:hover:bg-transparent dark:border-gray-700"
+                                        className={'block py-2 pl-3 pr-4 border-b border-gray-100 bg-transparent p-0 hover:bg-gray-50 hover:bg-transparent hover:text-primary-700 dark:hover:bg-gray-700 dark:hover:text-white dark:hover:bg-transparent dark:border-gray-700' + (pathname === '/blog' ? ' bg-primary-100 text-white' : ' text-gray-400')}
                                     >
                                         Blog
                                     </Link>
@@ -56,7 +63,7 @@ const NavBar = () => {
                                 <li>
                                     <Link
                                         href="/contact"
-                                        className="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 hover:bg-transparent border-0 hover:text-primary-700 p-0 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white dark:hover:bg-transparent dark:border-gray-700"
+                                        className={'block py-2 pl-3 pr-4 border-b border-gray-100 bg-transparent p-0 hover:bg-gray-50 hover:bg-transparent hover:text-primary-700 dark:hover:bg-gray-700 dark:hover:text-white dark:hover:bg-transparent dark:border-gray-700' + (pathname === '/contact' ? ' bg-primary-100 text-white' : ' text-gray-400')}
                                     >
                                         Contact
                                     </Link>
