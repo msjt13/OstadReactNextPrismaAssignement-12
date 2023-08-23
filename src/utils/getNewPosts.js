@@ -1,7 +1,7 @@
-export default async function(category_id = 1) {
+export default async function() {
     console.log('Fetching new posts...');
 
-    const url = process.env.API_BASE_URL + '/post-list/' + category_id;
+    const url = process.env.API_BASE_URL + '/post-newest';
     console.log('url: ', url);
 
     const res = await fetch(url);

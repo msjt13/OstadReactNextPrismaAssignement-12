@@ -5,16 +5,15 @@ import Blog from "@/components/home/blog";
 
 export default function Home() {
     return (
-        <main className="flex flex-col items-center justify-between min-h-screen p-24">
-            <h1 className="text-6xl font-bold text-center">Home</h1>
-            <section>
+        <main className="flex flex-col items-center justify-between min-h-screen p-12">
+            <section className="bg-white dark:bg-gray-900 my-2 w-full">
                 <Section1/>
             </section>
-            <section>
-                <Section2/>
-            </section>
-            <section>
+            <section className="bg-white dark:bg-gray-900 my-2 w-full">
                 <Blog/>
+            </section>
+            <section className="bg-white dark:bg-gray-900 my-2 w-full">
+                <Section2/>
             </section>
         </main>
     );
